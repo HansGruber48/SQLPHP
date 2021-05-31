@@ -1,0 +1,9 @@
+SELECT
+post_title
+LEFT(post_content,100),
+post_date,
+display_name
+FROM wp_posts,wp_users
+where post_type = "post"
+and post_status = "publish"
+and post_author = wp_user.ID
